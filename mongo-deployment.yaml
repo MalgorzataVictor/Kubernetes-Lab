@@ -19,8 +19,8 @@ spec:
           env:
             - name: MONGODB_ROOT_PASSWORD
               valueFrom:
-                configMapKeyRef:
-                  name: mongodb-config
+                secretKeyRef:
+                  name: mongodb-secret
                   key: password
             - name: MONGODB_ROOT_USER
               valueFrom:
